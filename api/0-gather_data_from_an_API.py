@@ -16,6 +16,7 @@ try:
     response_users = requests.request("GET","{}users/{}".format(url,id))
     response_tasks = requests.request("GET","{}todos/".format(url))
     employee_name = response_users.json()["name"]
+    
 except KeyError:
     print("couldn't request data")
 
