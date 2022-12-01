@@ -26,7 +26,7 @@ if __name__ == "__main__":
         if response_tasks.json()[i]['userId'] == id:
             if response_tasks.json()[i]['completed']:
                 total_number_of_done_task += 1
-            elif response_tasks.json()[i]['completed'] == False:
+            elif response_tasks.json()[i]['completed'] is False:
                 total_number_of_undone_tasks += 1
 
     total_number_of_done_or_undone_tasks = total_number_of_undone_tasks + \
