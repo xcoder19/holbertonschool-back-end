@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""api """
+"""
+api
+"""
 import requests
 import sys
-# accepts integer as paramater 
-#
+
 
 
 if len(sys.argv) == 2:
