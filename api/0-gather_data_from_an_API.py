@@ -30,7 +30,7 @@ if __name__ == "__main__":
                 total_number_of_undone_tasks +=1
 
     total_number_of_done_or_undone_tasks =  total_number_of_undone_tasks +  total_number_of_done_task          
-    print("Employee {} is done with tasks({}/{})".format(employee_name,total_number_of_done_task,total_number_of_done_or_undone_tasks))
+    print("Employee {} is done with tasks({}/{}):".format(employee_name,total_number_of_done_task,total_number_of_done_or_undone_tasks))
     for i in range(total_number_of_tasks):
         if response_tasks.json()[i]['userId'] == id:
             if response_tasks.json()[i]['completed'] == True:
