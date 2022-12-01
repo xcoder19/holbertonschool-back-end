@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-api
-"""
+"""api"""
 import requests
 import sys
 
@@ -18,7 +16,7 @@ if __name__ == "__main__":
         employee_name = response_users.json()["name"]
     
     except KeyError:
-        print("couldn't request data")
+        pass
 
     total_number_of_tasks = len(response_tasks.json())
     total_number_of_undone_tasks = 0
