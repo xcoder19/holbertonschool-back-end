@@ -21,17 +21,20 @@ if __name__ == "__main__":
 
     total_number_of_tasks = len(response_tasks.json())
 with open('{}.csv'.format(id), 'w') as f:
-    for i in range(total_number_of_tasks):
-        if response_tasks.json()[i]['userId'] == id:
+    try:
+        for i in range(total_number_of_tasks):
+            if response_tasks.json()[i]['userId'] == id:
 
-            f.write(
-                '"{}",'.format(id) +
-                '"{}",'.format(employee_name) +
-                '"{}",'.format(
-                    response_tasks.json()[i]['completed']) +
-                '"{}"'.format(
-                    response_tasks.json()[i]['title'])
+                f.write(
+                    '"{}",'.format(id) +
+                    '"{}",'.format(employee_name) +
+                    '"{}",'.format(
+                        response_tasks.json()[i]['completed']) +
+                    '"{}"'.format(
+                        response_tasks.json()[i]['title'])
 
 
-            )
-            f.write('\n')
+                )
+                f.write('\n')
+    except NameError:
+        pass
