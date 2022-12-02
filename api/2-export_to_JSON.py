@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """api"""
-import requests
 import json
+import requests
 import sys
 
 
